@@ -1,0 +1,116 @@
+.image {
+  height: 650;
+  width: 650px;
+  margin: 0 auto;
+  background-color: red;
+  animation-name: stretch;
+  animation-duration: 1000s; 
+  animation-timing-function: ease-out; 
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: none;
+  animation-play-state: running;
+    margin-right: auto;
+	padding: 4px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+top: 18%;
+transform: translateY(-50%);
+
+}
+
+.my-container {
+	width: 100%; 
+	height: 100%; 
+	background-image: url(http://i.imgur.com/W8EDWzJ.png);
+	background-position: 0px 0px; 
+		animation: animatedBackground 10s linear infinite,;
+	-moz-animation: animatedBackground 10s linear infinite;
+	-webkit-animation: animatedBackground 10s linear infinite;
+	-ms-animation: animatedBackground 10s linear infinite;
+	-o-animation: animatedBackground 10s linear infinite;
+}
+
+.size {
+  max-width: 940px;
+  min-width: 940px;
+  max-height: 10px;
+  min-height: 1px;
+}
+
+body, html { 
+    overflow-x: hidden; 
+    overflow-y: hidden;
+}
+
+@keyframes animatedBackground {
+	0% { background-position: 0 0; background-opacity:0;}
+	100% { background-position: -450px 0; background-opacity:1;}
+} 
+@-moz-keyframes animatedBackground {
+	0% { background-position: 0 0; }
+	100% { background-position: -450px 0; }
+}
+@-webkit-keyframes animatedBackground {
+	0% { background-position: 0 0; }
+	100% { background-position: -450px 0; }
+}
+@-ms-keyframes animatedBackground {
+	0% { background-position: 0 0; }
+	100% { background-position: -450px 0; }
+}
+@-o-keyframes animatedBackground {
+	0% { background-position: 0 0; }
+	100% { background-position: -450px 0; }
+}
+
+@keyframes stretch {
+  0% {
+    transform: scale(.1);
+    background-color: red;
+    border-radius: 100%;
+  }
+  50% {
+    background-color: orange;
+  }
+  100% {
+    transform: scale(20);
+    background-color: yellow;
+  }
+}
+
+
+#divContainer { margin: 6 auto; width: 800px; }
+    .divImageHolder {     }
+    .clear { 
+	clear:both;
+	}
+    
+    @-webkit-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1;  } }
+@keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+    .fade-in {
+    opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+    background:;
+    -webkit-animation-duration:4s;
+    -moz-animation-duration:4s;
+    animation-duration:4s;
+}
+
+.fade-in.one {
+-webkit-animation-delay: 2s;
+-moz-animation-delay: 2s;
+animation-delay: 2s;
+}
+
+
+
